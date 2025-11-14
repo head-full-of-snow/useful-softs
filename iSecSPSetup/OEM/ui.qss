@@ -1,0 +1,1733 @@
+$cn_family = SourceHanSansSC;
+$en_family = Roboto;
+
+$max_font = 24px;
+$large_font = 18px;
+$mid_font = 16px;
+$normal_font = 14px;
+$small_font = 12px;
+$min_font = 10px;
+$preLogin_label_Welcome_font = 36px;
+$postLogin_label_Welcome_font = 30px;
+
+$widget_border_radius = 10px;
+$button_border_radius = 3px;
+
+$main_color = #1E7AF4;
+$white_color = #FFFFFF;
+$first_level_color = #1F2E3D;
+$second_level_color = #475768;
+$third_level_color = #577592;
+$tips_color = #A8B8C7;
+$resource_btn_detect_color = #22B4FF;
+$label_detect_success_color = #34C759;
+$label_userInfo_AuthLevel_color = #FFF0AE;
+
+$border_color = #D3DCE6;
+$disabled_color = #8F969E;
+$scrollbar_color = #EFF2F6;
+
+$lineedit_disabled_bgcolor = #EFF0F1;
+$lineedit_disabled_color = #757575;
+
+$siteWidget_background = rgba(255,255,255,70%);
+$sub_widget_background = #FAFBFD;
+$close_hover_background = #E50113;
+$comboBox_selected_background = #E8F1FD;
+$progressBar_chunk_background = #00D5D0;
+$btn_cert_import_background = #EFF2F6;
+$leftMenu_background = rgba(246, 247, 251, 95%);
+$resource_btn_detect_background = #D4F4FF;
+$resourceList_item_background = qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #F0F1F4, stop:1 #FAFBFD);
+$resourceList_item_hover_background = qlineargradient(x1:0, y1:1, x2:1, y2:0, stop:0 #004AEB, stop:1 #97C2FE);
+$sandbox_background = qlineargradient(x1:0, y1:0, x2:1, y2:0,stop:0 #135FD4, stop:1 #46C2F7);
+$detect_process_top_background = qlineargradient(x1:0, y1:0, x2:1, y2:0,stop:0 #4C83FB,stop:1 #95C2FF);
+$detect_process_top_btn_background = qlineargradient(x1:0, y1:0, x2:1, y2:0,stop:0 #FFFFFF,stop:1 #E1EBFF);
+$diagnose_top_background = qlineargradient(x1:0, y1:0, x2:1, y2:0,stop:0 #428EFF,stop:1 #87C3FF);
+
+*{
+	font-family: $cn_family;
+	font-size: $normal_font;
+	color: $first_level_color;
+	outline: none;
+}
+
+QLineEdit{
+	background: white;
+	border: 1px solid $border_color;
+	border-radius: $button_border_radius;
+	padding: 6px 10px 6px 10px;
+}
+
+QPushButton{
+	background-color: $main_color;
+	border-radius: $button_border_radius;
+	padding: 6px 30px 6px 30px;
+	color: $white_color;
+}
+
+QToolButton{
+	background-color:transparent;
+	border-radius: $button_border_radius;
+}
+
+QToolButton#toolButtonClose:hover{
+	background: $close_hover_background;
+	border-radius: $button_border_radius;
+}
+
+QComboBox{
+	background: $btn_cert_import_background;
+	border-radius: $button_border_radius;
+	border: 1px solid $border_color;
+	padding: 6px 20px 6px 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 25px;
+	border: none;
+}
+
+QComboBox::down-arrow {
+    image: url(:/isecsp/res/expandArrow.png);
+}
+
+QComboBox QAbstractItemView{
+	background: $white_color;
+	border: 1px solid $border_color;
+	border-radius: $button_border_radius;
+	padding: 6px 10px 6px 10px;
+}
+
+QComboBox QAbstractItemView::item{
+	min-height:25px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+	background: $comboBox_selected_background;
+	color: $main_color;
+}
+
+/*--------------------TopMenu--------------------*/
+QWidget#widgetLogo{
+	border-top-left-radius: $widget_border_radius;
+}
+
+QWidget#widgetTopMenu{
+	border-top-right-radius: $widget_border_radius;
+}
+
+QWidget#widgetTitle QLabel{
+	font-size: $large_font;
+	font-family: $en_family;
+	color: $white_color;
+}
+
+QWidget#widgetTitle QToolButton{
+	border-style:none;
+}
+
+QWidget#widgetTitle QToolButton::menu-indicator{
+	image:none;
+}
+
+QWidget#widgetTitle QToolButton:hover{
+	background: $border_color;
+}
+
+QWidget#widgetTitle QToolButton#btnClose:hover{
+	background: $close_hover_background;
+}
+
+QWidget#widgetTitle QLineEdit{
+    background: $white_color;
+	border-radius: 15px;
+	border: 1px solid $border_color;
+}
+
+QWidget#widgetUserTop{
+	border-top-left-radius: $widget_border_radius;
+	background: $leftMenu_background;
+	border-left: 1px solid $border_color;
+	border-top: 1px solid $border_color;
+}
+
+QWidget#widgetTitle QWidget#widgetUserTop QToolButton#toolButtonUserTop{
+	padding-right: 18px;
+	background-image: url(:/isecsp/res/more.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+QMenu{
+	background: $white_color;
+	border: none;
+}
+
+QMenu::item:selected{
+	background: $comboBox_selected_background;
+	color: $main_color;
+}
+
+/*--------------------widgetContact--------------------*/
+QWidget#widgetContact QLabel#labelContact
+{
+	color: $white_color;
+	font-size: $small_font;
+}
+
+/*--------------------downloaddlg--------------------*/
+QDialog#downloaddlg{
+	background: $white_color;
+}
+
+QDialog#downloaddlg QLabel#labelDownloadingRate{
+	font-family: $en_family;
+}
+
+/*--------------------LaunchSandboxDlg--------------------*/
+QDialog#LaunchSandboxDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#LaunchSandboxDlg QLabel#labelTitle{
+	color: $first_level_color;
+	font-family: $en_family;
+	font-size: $large_font;
+}
+
+QDialog#LaunchSandboxDlg QToolButton#toolButtonClose:hover{
+	background: $close_hover_background;
+}
+
+/*--------------------Login Main--------------------*/
+QWidget#widgetLogin QLabel#labelWelcome{
+	font-size: $preLogin_label_Welcome_font;
+	font-weight: bold;
+	color: $white_color;
+}
+
+QWidget#widgetLogin QLabel#labelWelcomeEnglish{
+	font-size: $mid_font;
+	font-family: $en_family;
+	color: $white_color;
+}
+
+QWidget#widgetLoginTips QLabel#labelTipsTitle{
+	font-size: $normal_font;
+	color: $white_color;
+}
+
+QWidget#widgetLoginTips QLabel#labelProblems{
+	font-size: $max_font;
+	font-weight: bold;
+	color: $white_color;
+}
+
+QWidget#widgetLoginTips QTextEdit
+{
+	font-size: $large_font;
+	color: $white_color;
+	background: transparent;
+	border-radius: $widget_border_radius;
+	padding: 10px 0px 10px 10px;
+}
+
+QWidget#widgetLoginTips QTextEdit QScrollBar::handle:vertical{
+	min-height: 10px;
+	max-height: 10px;
+	background: $scrollbar_color;
+}
+
+QWidget#addSiteWidget, QWidget#showSiteWidget, QWidget#advancedSettingWidget, QWidget#connectSiteWidget, QWidget#autoDetectEnvirWidget, QWidget#authWidget, QWidget#QRCodeAuthWidget{
+	background: $siteWidget_background;
+	border-radius: $widget_border_radius;
+}
+
+/*--------------------addSiteWidget--------------------*/
+QWidget#addSiteWidget QLabel#labelCreateSite{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#addSiteWidget QToolButton#toolButtonImportSite{
+	color: $main_color;
+}
+
+QWidget#addSiteWidget QLabel#labelNoSite{
+	font-size: $small_font;
+	color: $tips_color;
+	padding: 4px 2px 5px 20px; /* left padding must be more than the icon's width */
+	background-image: url(:/isecsp/res/tip.png); /* actual size, e.g. 16x16 */
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#addSiteWidget QLineEdit{
+	border-radius: $button_border_radius;
+	border: 1px solid $border_color;
+	padding: 6px 10px 6px 10px;
+}
+
+QWidget#addSiteWidget QLineEdit,QPushButton{
+	height: 20px;
+}
+
+QWidget#addSiteWidget QLineEdit:disabled
+{
+	background-color: $lineedit_disabled_bgcolor;
+	color: $lineedit_disabled_color;
+
+}
+
+QWidget#addSiteWidget QToolButton#toolButtonSiteDetect, QWidget#addSiteWidget QPushButton#btnAdvancedSetting, QWidget#addSiteWidget QPushButton#btnCancelAddSite{
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+	padding: 0px;
+}
+
+/*--------------------advancedSettingWidget--------------------*/	
+QWidget#advancedSettingContentWidget, QWidget#advancedSettingScrollAreaWidget{
+	background:transparent;
+	border:none;
+}
+
+QWidget#SPASettingWidget,QWidget#networkProxySettingWidget,QWidget#reconnectSettingWidget,QWidget#certAuthWidget,QWidget#checkCloseSystemBrowserWidget{
+	background: $siteWidget_background;
+	border-radius: 4px;
+}
+
+QWidget#advancedSettingWidget QLineEdit, QWidget#advancedSettingWidget QPushButton, 
+QWidget#advancedSettingWidget QToolButton, QWidget#advancedSettingWidget QComboBox, 
+QWidget#advancedSettingWidget QRadioButton
+{
+	font-size: $normal_font;
+	min-height: 23px;
+}
+
+QWidget#advancedSettingTopWidget QLabel{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#advancedSettingTopWidget QPushButton{
+	font-size: $large_font;
+	font-weight: bold;
+	color: $main_color;
+	background-color:transparent;
+	border:none;
+	padding:0px;
+}
+
+QWidget#advancedSettingWidget QLineEdit{
+	background-color: $white_color;
+	border: 1px solid $border_color;
+	padding: 4px;
+}
+
+QWidget#advancedSettingWidget QLabel#labelSPASetting, QWidget#advancedSettingWidget QLabel#labelNetworkSetting, QWidget#advancedSettingWidget QLabel#labelCertSetting, QWidget#advancedSettingWidget QLabel#labelAuthMethod{
+	font-size: $mid_font;
+}
+
+QWidget#advancedSettingWidget QCheckBox#checkBoxSPASettingStatus,QWidget#advancedSettingWidget QCheckBox#checkBoxCertSettingStatus,
+QWidget#advancedSettingWidget QCheckBox#checkBoxServerCert,QWidget#advancedSettingWidget QCheckBox#checkBoxAuthSettingStatus{
+	background-color: transparent;
+	border: none;
+
+}
+
+QWidget#advancedSettingWidget QCheckBox#checkBoxSPASettingStatus::indicator,QWidget#advancedSettingWidget QCheckBox#checkBoxCertSettingStatus::indicator,
+QWidget#advancedSettingWidget QCheckBox#checkBoxServerCert::indicator,QWidget#advancedSettingWidget QCheckBox#checkBoxAuthSettingStatus::indicator{
+	min-width: 30px;
+	border: none;
+}
+
+QWidget#advancedSettingWidget QCheckBox#checkBoxSPASettingStatus::checked,QWidget#advancedSettingWidget QCheckBox#checkBoxCertSettingStatus::checked,
+QWidget#advancedSettingWidget QCheckBox#checkBoxServerCert::checked,QWidget#advancedSettingWidget QCheckBox#checkBoxAuthSettingStatus::checked{
+	background-image: url(:/isecsp/res/btn_on.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QWidget#advancedSettingWidget QCheckBox#checkBoxSPASettingStatus::unchecked,QWidget#advancedSettingWidget QCheckBox#checkBoxCertSettingStatus::unchecked,
+QWidget#advancedSettingWidget QCheckBox#checkBoxServerCert::unchecked,QWidget#advancedSettingWidget QCheckBox#checkBoxAuthSettingStatus::unchecked{
+	background-image: url(:/isecsp/res/btn_off.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QWidget#advancedSettingWidget QRadioButton#radioButtonSecureBrowser,QWidget#advancedSettingWidget QRadioButton#radioButtonSystemBrowser{
+	border: 1px solid $border_color;
+	border-radius: $button_border_radius;
+	padding: 4px 20px 4px 4px;
+}
+
+QWidget#advancedSettingWidget QRadioButton#radioButtonSecureBrowser::indicator,QWidget#advancedSettingWidget QRadioButton#radioButtonSystemBrowser::indicator{
+	width: 0px;
+	height: 0px;
+	border: none;
+}
+
+QWidget#advancedSettingWidget QRadioButton#radioButtonSecureBrowser::checked,QWidget#advancedSettingWidget QRadioButton#radioButtonSystemBrowser::checked{
+	background-image: url(:/isecsp/res/checkedIcon.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+	border: 1px solid $main_color;
+}
+
+QWidget#SPASettingWidget QToolButton{
+	background-color: $main_color;
+	border-radius: $button_border_radius;
+	padding: 4px 15px 4px 15px;
+	color: $white_color;
+}
+
+QWidget#SPASettingWidget QToolButton::disabled{
+	background-color: $border_color;
+	border: none;
+	color: $disabled_color;
+}
+
+QWidget#certAuthWidget QToolButton{
+	background-color: $btn_cert_import_background;
+	border: 1px solid $border_color;
+	border-left: 0px;
+	min-width: 60px;
+}
+
+QWidget#MAuthCertListWidget{
+	background-color: transparent;
+	border: none;
+}
+
+QWidget#MAuthCertListWidget QLabel#labelMAuthCertUname{
+	padding: 4px 2px 5px 22px;
+	background-image: url(:/isecsp/res/certIcon.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#MAuthCertListWidget QToolButton#toolButtonUpdateMAuthCert, QWidget#MAuthCertListWidget QToolButton#toolButtonDeleteMAuthCert, QWidget#MAuthCertListWidget QToolButton#toolButtonChangePinCode{
+	background-color: transparent;
+	border: none;
+	padding: 4px;
+	qproperty-iconSize: 20px 20px;
+	min-width: 20px;
+	max-width: 40px;
+}
+
+QWidget#MAuthRegisterWidget QToolButton#toolButtonGetMAuthRegistrationCode{
+	background-color: transparent;
+	border: none;
+	color: $disabled_color;
+}
+
+QWidget#MAuthRegisterWidget QToolButton#toolButtonMAuthRegister{
+	background-color: $border_color;
+	border: none;
+	color: $disabled_color;
+	padding: 4px;
+	min-width: 120px;
+}
+
+QLineEdit#lineEditSignCertPath, QLineEdit#lineEditEncCertPath, QLineEdit#lineEditServerCert{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+QToolButton#toolButtonImportSignCert,QToolButton#toolButtonImportEncCert,QToolButton#toolButtonImportServerCert{
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+QWidget#advancedSettingWidget QLabel#labelBrowserAuthNote, QLabel#labelCloseSystemBrowserNote, QLabel#labelServerCertNote
+{
+	color: $tips_color;
+	font-size: $small_font;
+}
+
+/*--------------------showSiteWidget--------------------*/
+QWidget#showSiteWidget QLabel#labSiteList{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#showSiteWidget QPushButton#btnToAddSite{
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+	padding: 0px;
+}
+
+QWidget#siteListWidget{
+	background-color:transparent;
+	border:none;
+}
+
+QWidget#siteListWidget QRadioButton{
+	max-width: 155px;
+	padding: 4px 20px 4px 4px;
+	border: 1px solid #AAAAAA;
+	border-radius: $button_border_radius;
+}
+
+QWidget#siteListWidget QRadioButton::indicator {
+   width: 0px;
+   height: 0px;
+   border: none;
+}
+
+QWidget#siteListWidget QRadioButton::checked {
+    background-image: url(:/isecsp/res/checkedIcon.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+	border: 1px solid $main_color;
+}
+
+QWidget#siteListWidget QPushButton#btnEditSite,QWidget#siteListWidget QPushButton#btnDeleteSite{
+	background-color: transparent;
+	border: none;
+	padding: 4px;
+	qproperty-iconSize: 20px 20px;
+}
+
+/*--------------------QScrollArea--------------------*/
+QScrollArea{
+	border:none;
+	background-color:transparent;
+}
+QScrollBar:vertical{
+	width:6px;
+	background:transparent;
+	border:none;
+	margin:0px,1px,0px,1px;
+	padding-top:0px;
+	padding-bottom:0px;
+	border-radius: $button_border_radius;
+}
+QScrollBar::handle:vertical{
+	min-height:30px;
+	background:transparent;
+	border-radius: $button_border_radius;
+}
+QScrollBar::handle:vertical:hover{
+	min-height:30px;
+	max-height:30px;
+	background: $main_color;
+	border-radius: $button_border_radius;
+}
+QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
+	background:transparent;
+	border:none;
+}
+QScrollBar::add-line:vertical,QScrollBar::sub-line:vertical{
+	height:0px;
+	width:0px;
+}
+
+QScrollBar:horizontal{
+	height:6px;
+	margin:0px 1px 0px 1px;
+	background:transparent;
+	border:none;
+	border-radius: $button_border_radius;
+}
+
+QScrollBar::handle:horizontal{
+	background:transparent;
+	border-radius: $button_border_radius;
+}
+
+QScrollBar::handle:horizontal:hover{
+	background: transparent;
+	border-radius: $button_border_radius;
+}
+
+QScrollBar::sub-page:horizontal,QScrollBar::add-page:horizontal{
+	background:transparent;
+	border:none;
+}
+
+QScrollBar::add-line:horizontal,QScrollBar::sub-line:horizontal{
+	height:0px;
+	width:0px;
+}
+
+/*--------------------connectSiteWidget, autoDetectEnvirWidget--------------------*/
+QWidget#connectSiteWidget QLabel#labelConnectSiteTitle1, QWidget#autoDetectEnvirWidget QLabel#labelAutoDetectEnvirTitle2{
+	min-width: 30px;
+	min-height: 30px;
+	max-width: 30px;
+	max-height: 30px;
+	border-radius: 15px;
+	background: $main_color;
+	color: $white_color;
+}
+
+QWidget#connectSiteWidget QLabel#labelConnectSiteTitle2, QWidget#autoDetectEnvirWidget QLabel#labelAutoDetectEnvirTitle1{
+	min-width: 30px;
+	min-height: 30px;
+	max-width: 30px;
+	max-height: 30px;
+	border-radius: 15px;
+	background: $sub_widget_background;
+	color: $tips_color;
+}
+
+QWidget#connectSiteWidget QLabel#labConnectingSite, QWidget#autoDetectEnvirWidget QLabel#labAutoDectingEnvir{
+	font-size: $mid_font;
+}
+
+QWidget#connectSiteWidget QLabel#labDoNothingInConnection{
+	font-size: $small_font;
+	color: $third_level_color;
+}
+
+QWidget#autoDetectEnvirWidget QLabel#labDoNothingInAutoDetection{
+	font-size: $small_font;
+	color: $third_level_color;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/warning.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#autoDetectEnvirWidget QProgressBar#progressBarAutoDetect, QWidget#connectSiteWidget QProgressBar#progressBarConnecting{
+	background-color: $sub_widget_background;
+	border-radius: 8px;
+	max-height: $mid_font;
+}
+
+QWidget#autoDetectEnvirWidget QProgressBar#progressBarAutoDetect::chunk, QWidget#connectSiteWidget QProgressBar#progressBarConnecting:chunk{
+	background-color: $progressBar_chunk_background;
+	border-radius: 8px;
+}
+
+/*--------------------authWidget--------------------*/
+QWidget#authWidget QLabel#labelAuthTitle{
+	font-size: $large_font;
+}
+
+QWidget#authWidget QLineEdit{
+	background: $white_color;
+	border: 1px solid $border_color;
+	padding: 6px;
+}
+
+QWidget#authWidget QToolButton#toolButtonForgetPwd, QDialog#challengeDlg QToolButton#toolButtonGetToken
+{
+	color: $main_color;
+}
+
+QListView#listViewOtherMethod{
+	background-color:transparent;
+	border:none;
+	outline:0px; 
+	padding: 0px 10px 0px 10px;
+}
+
+QListView#listViewOtherMethod::item{
+	background-color:transparent;
+	border:none;
+}
+
+QListView#listViewOtherMethod::item:selected{
+	border:none;	
+	color: $main_color;
+}
+
+/*--------------------accountAuthWidget--------------------*/
+QWidget#accountAuthWidget QCheckBox#checkBoxSavePwd{
+	background-color: transparent;
+	border: none;
+}
+
+QWidget#accountAuthWidget QCheckBox#checkBoxSavePwd::indicator{
+	min-width: 30px;
+	border: none;
+}
+
+QWidget#accountAuthWidget QCheckBox#checkBoxSavePwd::checked{
+	background-image: url(:/isecsp/res/btn_on.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QWidget#accountAuthWidget QCheckBox#checkBoxSavePwd::unchecked{
+	background-image: url(:/isecsp/res/btn_off.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*--------------------QRCodeAuthWidget--------------------*/
+QWidget#QRCodeAuthWidget QLabel{
+	font-size: $mid_font;
+}
+
+QWidget#QRCodeAuthWidget QLabel#labelQRCodeTitle{
+	font-size: $large_font;
+}
+
+QWidget#QRCodeAuthWidget QLabel#labelCodeScanning2, QWidget#QRCodeAuthWidget QLabel#labelQRCodeExpirationTimeValue{
+	color: $main_color;
+}
+
+/*--------------------SMSAuthDlg--------------------*/
+QDialog#SMSAuthDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#SMSAuthDlg QLabel#labelAuthTitle, QWidget#SMSAuthWidget QLabel#labelAuthTitle{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QDialog#SMSAuthDlg QLineEdit, QWidget#SMSAuthWidget QLineEdit{
+	background: $white_color;
+	border: 1px solid $border_color;
+	padding: 6px;
+}
+
+QDialog#SMSAuthDlg QToolButton#toolButtonSendSMSVCode, QWidget#SMSAuthWidget QToolButton#toolButtonSendSMSVCode{
+	background: $main_color;
+	border-radius: $button_border_radius;
+	color: $white_color;
+	padding: 6px;
+}
+
+QWidget#widgetSMSVCode,
+QDialog#SMSAuthDlg QWidget#widgetVerificationCode
+{
+	background: $white_color;
+	border: 1px solid $border_color;
+	border-radius: $button_border_radius;
+}
+
+QWidget#widgetSMSVCode QLineEdit#lineEditSMSVCode,
+QDialog#SMSAuthDlg QWidget#widgetVerificationCode QLineEdit#lineEditSMSVCode
+{
+	background: transparent;
+	border: none;
+}
+
+QDialog#SMSAuthDlg QCheckBox#checkBoxSMSVCodeVisibility, 
+QWidget#SMSAuthWidget QCheckBox#checkBoxSMSVCode {
+    background-color: transparent;
+    border: none;
+}
+
+QDialog#SMSAuthDlg QCheckBox#checkBoxSMSVCodeVisibility::indicator,
+QWidget#SMSAuthWidget QCheckBox#checkBoxSMSVCode::indicator {
+    min-width: 30px;
+    border: none;
+}
+
+QDialog#SMSAuthDlg QCheckBox#checkBoxSMSVCodeVisibility::checked,
+QWidget#SMSAuthWidget QCheckBox#checkBoxSMSVCode::checked {
+    background-image: url(:/isecsp/res/pwdDisplay.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+QDialog#SMSAuthDlg QCheckBox#checkBoxSMSVCodeVisibility::unchecked,
+QWidget#SMSAuthWidget QCheckBox#checkBoxSMSVCode::unchecked {
+    background-image: url(:/isecsp/res/pwdHide.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*--------------------mainWidget--------------------*/
+QStackedWidget#stackedWidgetMain{
+	background: $white_color;
+}
+
+QStackedWidget#stackedWidgetMain QLabel#labelMainWelcome{
+	font-size: $postLogin_label_Welcome_font;
+	font-weight:bold;
+}
+
+QStackedWidget#stackedWidgetMain QFrame#lineBelowMainWelcome{
+	margin:0px 20px 0px 20px;
+}
+
+QWidget#widgetMain QToolButton{
+	border-radius: $button_border_radius;
+	padding:3px 0px 3px 0px;
+	background:none;
+	border-style:none;
+}
+
+QWidget#widgetMain QToolButton:hover{
+	background-color: $border_color;
+}
+
+/*--------------------leftMenu--------------------*/
+QWidget#leftMenuWidget{
+	background: $leftMenu_background;
+	border-left: 1px solid $border_color;
+	border-bottom: 1px solid $border_color;
+	border-bottom-left-radius:$widget_border_radius;
+}
+
+QWidget#leftMenuWidget QFrame#lineMenu, QWidget#leftMenuWidget QFrame#lineAccount{
+	background-color: $white_color;
+}
+
+QWidget#leftMenuWidget QLabel#labelCleanCount{
+	min-width: 16px;
+	min-height: 16px;
+	max-width: 16px;
+	max-height: 16px;
+	border-radius: 8px;
+	background: $first_level_color;
+	font-size: $min_font;
+	font-family: $en_family;
+	color: $white_color;
+}
+
+QWidget#leftMenuWidget QLabel#labelMenu, QWidget#leftMenuWidget QLabel#labelAccount{
+	font-size: $min_font;
+	font-family: $en_family;
+	color: $tips_color;
+	padding-left: 4px;
+}
+
+QWidget#leftMenuWidget QToolButton, QWidget#widgetUserTop QToolButton{
+	border-radius: $button_border_radius;
+	color: $first_level_color;
+	font-size: $normal_font;
+	padding: 5px 0px 5px 0px;
+}
+
+QWidget#leftMenuWidget QToolButton#toolButtonUser{
+	padding-right: 18px;
+	background-image: url(:/isecsp/res/more.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+QWidget#leftMenuWidget QWidget#widgetLogoBottom QLabel{
+	font-size: $large_font;
+	font-family: $en_family;
+}
+
+/*--------------------userInfoWidget--------------------*/
+QWidget#widgetUserInfoTop{
+	background: $first_level_color;
+	border-radius: $widget_border_radius;
+}
+
+QWidget#widgetUserIP, QWidget#widgetUserStatus{
+    font-size: $normal_font;
+	background-color: $sub_widget_background;
+	border-radius: $widget_border_radius;
+}
+
+QWidget#userInfoWidget QLabel#labelUserInfoHello{
+	font-size: $min_font;
+	font-family: $en_family;
+	color: $tips_color;
+}
+
+QWidget#userInfoWidget QLabel#labelUserInfoTitle{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#userInfoWidget QLabel#labelUserName{
+	font-size: $large_font;
+	color: $white_color;
+}
+
+QWidget#userInfoWidget QLabel#labelDeviceTrusted{
+	font-size: $small_font;
+	color: #00C853;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/trusted.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#userInfoWidget QLabel#labelDeviceUntrusted{
+	font-size: $small_font;
+	color: #FF5722;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/untrusted.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#userInfoWidget QLabel#labelPosition{
+	font-size: $small_font;
+	color: $tips_color;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/position.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#userInfoWidget QLabel#labelUserInfoAuthLevel{
+	font-size: $small_font;
+	color: $label_userInfo_AuthLevel_color;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/rank.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#userInfoWidget QLabel#labelBestSite{
+	font-size: $small_font;
+	color: $white_color;
+	padding: 4px 2px 5px 20px;
+	background-image: url(:/isecsp/res/best_site.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+QWidget#userInfoWidget QToolButton{
+	background-color: transparent;
+	border:none;
+	font-size: $normal_font;
+	color: $white_color;
+}
+
+QWidget#userInfoWidget QPushButton{
+	background-color: transparent;
+	border-bottom: 1px solid $tips_color;
+	border-radius: $button_border_radius;
+	padding: 2px;
+	font-size: $small_font;
+	color: $white_color;
+}
+
+QWidget#userInfoWidget QLabel#labelUserInfoCopyRight{
+	font-size: $min_font;
+	color: $tips_color;
+}
+
+/*--------------------changePasswordDlg--------------------*/
+QDialog#changePasswordDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#changePasswordDlg QLabel{
+	color: $first_level_color;
+}
+
+QDialog#changePasswordDlg QWidget#widgetChangePwd{
+	background: $sub_widget_background;
+	border-radius: $widget_border_radius;
+}
+
+QDialog#changePasswordDlg QPushButton#pushButtonCancel{
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+	padding: 0px;
+}
+
+QDialog#changePasswordDlg QToolButton#toolButtonClose:hover{
+	background: $close_hover_background;
+}
+
+/*--------------------spagetpwddlg--------------------*/
+QDialog#spagetpwddlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#spagetpwddlg QLabel{
+	color: $first_level_color;
+}
+
+QDialog#spagetpwddlg QWidget#SPASettingWidget{
+	background: $white_color;
+	border-radius: $widget_border_radius;
+}
+
+QDialog#spagetpwddlg QLineEdit#lineEditSPAUserName{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#spagetpwddlg QPushButton#pushButtonConfirm{
+	background-color:transparent;
+	border: 1px solid $main_color;
+	color: $main_color;
+	padding: 3px 30px 3px 30px;
+}
+
+QDialog#spagetpwddlg QToolButton#toolButtonClose:hover{
+	background: $close_hover_background;
+}
+
+/*--------------------StatusDlg--------------------*/
+QDialog#StatusDlg *{
+	font-size: $mid_font;
+}
+
+QDialog#StatusDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#StatusDlg QLabel#labelTitle{
+	font-family: $en_family;
+	font-size: $large_font;
+}
+
+QDialog#StatusDlg QToolButton#toolButtonStatus, QDialog#StatusDlg QToolButton#toolButtonDNS, QDialog#StatusDlg QToolButton#toolButtonResource{
+	min-width: 120px;
+	min-height: 30px;
+	border: none;
+}
+
+QDialog#StatusDlg QStackedWidget#stackedWidget{
+	background: $sub_widget_background;
+	border: 10px;
+}
+
+QDialog#StatusDlg QTreeView#treeViewDNS, QDialog#StatusDlg QTextEdit#textEditResource{
+	background: transparent;
+	border: none;
+}
+
+QDialog#StatusDlg QPushButton#DNSPushButton{
+	background: transparent;
+	border: none;
+}
+
+/*--------------------exitDlg--------------------*/
+QDialog#ExitDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#ExitDlg QLabel#labelTitle{
+	font-family: $en_family;
+	font-size: $large_font;
+}
+
+/*--------------------PinCodeDlg--------------------*/
+QDialog#PinCodeDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#PinCodeDlg QLabel#labelTitle{
+	font-family: $en_family;
+	font-size: $mid_font;
+	color: $first_level_color;
+}
+
+/*--------------------QRCodeDlg--------------------*/
+QDialog#QRCodeDlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#QRCodeDlg QLabel#labelTitle{
+	font-family: $en_family;
+	font-size: $mid_font;
+	color: $first_level_color;
+}
+
+QDialog#QRCodeDlg QToolButton#toolButtonClose:hover{
+	background: $close_hover_background;
+}
+
+/*--------------------resource, sandbox--------------------*/
+QWidget#resourceWidget QLabel#labelResourceTitle
+{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#widgetAuthLevel{
+	border-image: url(:/isecsp/res/reliableBackground.png);
+	border-radius: $widget_border_radius;
+}
+
+QWidget#widgetSandboxWelcome{
+	background: $sandbox_background;
+	border-image: url(:/isecsp/res/sandboxBackground.png);
+	border-radius: $widget_border_radius;
+}
+
+QWidget#widgetAuthLevel QLabel#labelAuthLevel, QWidget#widgetSandboxWelcome QLabel#labelSandboxWelcome{
+	font-size: $max_font;
+	color: $white_color;
+}
+
+QWidget#widgetAuthLevel QToolButton, QWidget#widgetSandboxWelcome QToolButton{
+	background: transparent;
+	border: none;
+	color: $white_color;
+	font-size: $small_font;
+	padding: 0px;
+}
+
+QWidget#widgetAuthLevel QToolButton#toolButtonDisplayWebPortal:hover, QWidget#widgetSandboxWelcome QToolButton#toolButtonSandboxGuide:hover, QWidget#widgetSandboxWelcome QToolButton#toolButtonSandboxSetting:hover{
+	background: transparent;
+	border: none;
+	color: $first_level_color;
+	font-size: $small_font;
+}
+
+QWidget#widgetAuthLevel QPushButton{
+	background: $resource_btn_detect_background;
+	border: none;
+	color: $resource_btn_detect_color;
+	font-size: $mid_font;
+	padding: 5px 50px 5px 50px;
+	min-height: 25px;
+}
+
+QListView#listView
+{
+	background: $white_color;
+	border-radius: $widget_border_radius;
+	border: none;
+	outline:0px;
+}
+
+QListView#listView::item
+{
+	min-width: 110px;
+	min-height: 70px; 
+	max-width: 110px;
+	max-height: 70px; 
+	padding: 10px;
+	margin: 0px 10px 10px 0px;
+	background: $resourceList_item_background;
+	border-radius: 2px;
+}
+
+QListView#listView::item:hover
+{
+	background: $resourceList_item_hover_background;
+	border: none;
+	color: $white_color;
+}
+
+QListView#listView::item:disabled
+{
+	color: $first_level_color;
+	background: transparent;
+	border: none;
+	padding: 10px 0px 0px 0px;
+}
+
+QListView#listView QScrollBar::handle:vertical{
+	min-height:30px;
+	max-height:30px;
+	background:$main_color;
+}
+
+QDialog#Other, QTabWidget
+{
+	background-color: $white_color;
+}
+
+QTabBar::tab
+{
+	padding: 6px 10px 6px 10px;
+}
+
+QTabBar::tab:selected
+{
+	background-color: #B4D4FF;
+	color: $main_color;
+	border-radius: $button_border_radius;
+}
+
+/*--------------------networkResource--------------------*/
+QWidget#networkResourceWidget QLabel#labelNetworkResourceTitle
+{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#networkResourceWidget QTextEdit
+{
+	font-size: normal_font;
+	color: #475768;
+	background: $sub_widget_background;
+	border-radius: $widget_border_radius;
+	padding: 10px 0px 10px 10px;
+}
+
+QWidget#networkResourceWidget QTextEdit QScrollBar::handle:vertical{
+	min-height: 30px;
+	max-height: 30px;
+	background: $scrollbar_color;
+}
+
+/*--------------------detect--------------------*/
+QWidget#envirDetectWidget QLabel#labelEnvirDetect, QWidget#complianceDetectWidget QLabel#labelComplianceDetect, QWidget#netDiagWidget QLabel#labelNetDiag, QWidget#cleanCacheWidget QLabel#labelCleanCache{
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QWidget#widgetEnvirDetectList, QWidget#widgetNetDiagList{
+	border-image:url(:/isecsp/res/envirDetect_background.png);
+}
+
+QWidget#widgetComplianceDetectList{
+	border-image:url(:/isecsp/res/protect_background.png);
+}
+
+QWidget#widgetCleanCacheList{
+	border-image:url(:/isecsp/res/clean_background.png);
+}
+
+QWidget#widgetEnvirDetectList QLabel#labelRegularEnvirDetect, QWidget#widgetComplianceDetectList QLabel#labelRegularComplianceDetect, QWidget#widgetNetDiagList QLabel#labelRegularNetDiag, QWidget#widgetCleanCacheList QLabel#labelRegularCleanCache{
+	font-size: $max_font;
+	font-weight: bold;
+}
+
+QWidget#widgetEnvirDetectList QLabel#labelOneClickEnvirDetect, QWidget#widgetComplianceDetectList QLabel#labelOneClickComplianceDetect, QWidget#widgetNetDiagList QLabel#labelOneClickNetDiag, QWidget#widgetCleanCacheList QLabel#labelOneClickCleanCache{
+	font-size: $mid_font;
+	color: $third_level_color;
+}
+
+QWidget#widgetEnvirDetectList QTreeView#treeViewEnvirDetectList, QWidget#widgetComplianceDetectList QTreeView#treeViewComplianceDetectList, QWidget#widgetNetDiagList QTreeView#treeViewNetDiagList, QWidget#widgetCleanCacheList QTreeView#treeViewCleanCacheList{
+	max-width:260px;
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+}
+
+QWidget#widgetEnvirDetectList QTreeView#treeViewEnvirDetectList::item, QWidget#widgetComplianceDetectList QTreeView#treeViewComplianceDetectList::item, QWidget#widgetNetDiagList QTreeView#treeViewNetDiagList::item, QWidget#widgetCleanCacheList QTreeView#treeViewCleanCacheList::item{
+	margin:4px;
+}
+
+QWidget#widgetEnvirDetectList QPushButton, QWidget#widgetComplianceDetectList QPushButton, QWidget#widgetNetDiagList QPushButton, QWidget#widgetCleanCacheList QPushButton{
+	max-width: 160px;
+	max-height: 40px;
+	font-size: $mid_font;
+}
+
+
+QWidget#widgetEnvirDetectProcessTop, QWidget#widgetComplianceDetectProcessTop, QWidget#widgetNetDiagProcessTop, QWidget#widgetCleanCacheProcessTop{
+	background: $detect_process_top_background;
+	border-top-left-radius: $widget_border_radius;
+	border-top-right-radius: $widget_border_radius;
+}
+
+
+QWidget#widgetEnvirDetectProcessTop QLabel#labelEnvirDetecting, QWidget#widgetComplianceDetectProcessTop QLabel#labelComplianceDetecting, QWidget#widgetNetDiagProcessTop QLabel#labelNetDiagnosing, QWidget#widgetCleanCacheProcessTop QLabel#labelCacheCleaning{
+	font-size: $max_font;
+	font-weight: bold;
+	color: $white_color;
+}
+
+QWidget#widgetEnvirDetectProcessTop QLabel#labelEnvirScanning, QWidget#widgetComplianceDetectProcessTop QLabel#labelComplianceScanning, QWidget#widgetNetDiagProcessTop QLabel#labelNetScanning, QWidget#widgetCleanCacheProcessTop QLabel#labelCacheScanning{
+	color: $white_color;
+}
+
+QWidget#widgetEnvirDetectProcessTop QPushButton, QWidget#widgetComplianceDetectProcessTop QPushButton, QWidget#widgetNetDiagProcessTop QPushButton, QWidget#widgetCleanCacheProcessTop QPushButton{
+	padding: 10px 14px 10px 14px;
+	background-color: $detect_process_top_btn_background;
+	border-radius: $button_border_radius;
+	font-size: $mid_font;
+	color: $main_color;
+}
+
+QWidget#widgetEnvirDetectContent, QWidget#widgetComplianceDetectContent, QWidget#widgetNetDiagContent, QWidget#widgetCleanCacheContent, QWidget#widgetManualNetDiag{
+	background-color: $sub_widget_background;
+	border-bottom-left-radius: $widget_border_radius;
+	border-bottom-right-radius: $widget_border_radius;
+}
+
+QWidget#stackedWidgetMain{
+	border-right: 1px solid $border_color;
+	border-bottom: 1px solid $border_color;
+	border-bottom-right-radius: $widget_border_radius;
+}
+
+QWidget#stackedWidgetMain QLabel#labelEnvirName{
+	font-size: $mid_font;
+	color: $first_level_color;
+	min-height: 30px;
+}
+
+QWidget#stackedWidgetMain QLabel#labelDetecting{
+	color: $label_detect_success_color;
+	max-height: 20px;
+}
+
+QWidget#stackedWidgetMain QLabel#labelEnvirItemContent{
+	color: $second_level_color;
+	max-height: 20px;
+}
+
+QWidget#stackedWidgetMain QLabel#labelEnvirItemResult{
+	color: $label_detect_success_color;
+	max-height: 20px;
+}
+
+QWidget#widgetManualNetDiag, QWidget#widgetManualNetDiagResult
+{
+	background-color: transparent;
+}
+ 
+QWidget#widgetAutoNetDiag QToolButton#toolButtonRapidNetDiag, QWidget#widgetManualNetDiag QToolButton#toolButtonStartManualNetDiag{
+	padding: 4px 22px 4px 22px;
+	background-color: $main_color;
+	border-radius: $button_border_radius;
+	color: $white_color;
+}
+
+QWidget#widgetAutoNetDiag QPushButton#pushButtonStartNetDiag, QWidget#widgetManualNetDiag QToolButton#toolButtonGotoAutoNetDiag
+{
+	background-color: transparent;
+	border-bottom: 1px solid $main_color;
+	color: $main_color;
+	padding: 0px;
+	border-radius: 0px;
+}
+
+QLineEdit#lineEditManualNetIP, QLineEdit#lineEditManualNetPort, QComboBox#comboBoxManualNetprotocol{
+	padding: 4px;
+}
+
+QToolButton#toolButtonRapidNetDiag
+{
+	max-width: 165px;
+	max-height: 45px;
+}
+
+QWidget#widgetManualNetprotocol, QWidget#widgetbtnStartManualNetDiag, QWidget#widgetManualNetIPAndPort
+{
+	max-width: 280px;
+}
+
+QWidget#widgetManualNetPort
+{
+	max-width: 80px;
+}
+
+/*--------------------optiondlg--------------------*/
+QDialog#optiondlg QWidget#scrollAreaWidgetOption{
+	background: $white_color;
+}
+
+QScrollArea#scrollAreaOption QScrollBar::handle:vertical{
+	min-height:30px;
+	max-height:30px;
+	background:$main_color;
+}
+
+QDialog#optiondlg QWidget#widgetAutoLoginWindowsContent, QDialog#optiondlg QWidget#widgetAutoStartContent
+{
+	background: $sub_widget_background;
+}
+
+QDialog#optiondlg QCheckBox
+{
+	background-color: transparent;
+	border: none;
+	max-width: 30px;
+	min-width: 30px;
+	min-height: 16px;
+}
+
+QDialog#optiondlg QCheckBox::indicator
+{
+	border: none;
+	max-width: 30px;
+	min-width: 30px;
+	min-height: 16px;
+}
+
+QDialog#optiondlg QCheckBox::checked
+{
+	background-image: url(:/isecsp/res/btn_on.png);
+    background-repeat: no-repeat;
+	background-position: left;
+}
+
+QDialog#optiondlg QCheckBox::unchecked
+{
+	background-image: url(:/isecsp/res/btn_off.png);
+    background-repeat: no-repeat;
+	background-position: left;
+}
+
+QDialog#optiondlg QRadioButton::indicator::checked
+{
+	background-image: url(:/isecsp/res/upArrow.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QDialog#optiondlg QRadioButton::indicator::unchecked
+{
+	background-image: url(:/isecsp/res/downArrow.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QDialog#optiondlg QLineEdit, QDialog#optiondlg QComboBox
+{
+	border-radius: $button_border_radius;
+	border: 1px solid $border_color;
+	max-width: 190px;
+	max-height: 32px;
+}
+
+QDialog#optiondlg QLineEdit{
+	background-color: $white_color;
+	max-width: 200px;
+}
+
+QDialog#optiondlg
+{
+	color: #3F5C78;
+	font-size: $normal_font;
+}
+
+QDialog#optiondlg QLabel#labelSettings
+{
+	color: $first_level_color;
+	font-size: $large_font;
+	font-weight: bold;
+}
+
+QDialog#optiondlg QLabel#labelCommonSettings, QRadioButton#radioButtonAdvancedSettings
+{
+	color: $first_level_color;
+	font-size: $mid_font;
+	font-weight: 500;
+}
+
+QDialog#optiondlg QLabel#labelAutoLoginWindowsNote, QLabel#labelAutoStartNote, QLabel#labelAutoConnectNote, 
+QLabel#labelBrowserNote, QLabel#labelAdapterTypeNote, QLabel#labelTunnelTypeNote, 
+QLabel#labelMTUNote, QLabel#labelTCPAckFrequencyNote, QLabel#labelDnsProxyNote, 
+QLabel#labelEnableHostsNote, QLabel#labelEnableRedirectNote, QLabel#labelDisableProxyScriptRewriteNote, 
+QLabel#labelProxyListenPortNote, QLabel#labelEnableSubnetNote, QLabel#labelShowUINote,
+QLabel#labelGMCertRuleNote, QLabel#labelCertLocationNote,
+QLabel#labelEnableSecureBrowserNote
+{
+	color: $tips_color;
+	font-size: $small_font;
+}
+
+QDialog#optiondlg QPushButton
+{
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+	font-size: $large_font;
+	font-weight: bold;
+	padding: 0px;
+}
+
+/*--------------------AboutDlg--------------------*/
+QDialog#AboutDlg QWidget#widgetTop{
+	border-image: url(:/isecsp/res/about_background.png);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+QDialog#AboutDlg QLabel#labelAbout{
+	font-size: $mid_font;
+	font-weight: bold;
+}
+
+QDialog#AboutDlg QLabel#labelVersion, QLabel#labelBaseiSec{
+	color: $second_level_color;
+}
+
+QDialog#AboutDlg QPushButton#pushButtonHelp{
+	background-color:transparent;
+	border:none;
+	font-size: $small_font;
+	color: $main_color;
+}
+
+QDialog#AboutDlg QPushButton#pushButtonAgreement{
+	background-color:transparent;
+	border:none;
+	font-size: $small_font;
+	color: $main_color;
+}
+
+QDialog#AboutDlg QWidget#widgetBottom{
+	background: $sub_widget_background;
+	border: 1px solid $border_color;
+	border-top: none;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+QDialog#AboutDlg QLabel#labelCopyRight{
+	font-size: $min_font;
+	color: $tips_color;
+}
+
+/*--------------------wgdlg--------------------*/
+QDialog#wgdlg{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#wgdlg QLabel#labelTitle{
+	font-family: $en_family;
+	font-size: $large_font;
+}
+
+QDialog#wgdlg QWidget#widgetContent{
+	background-color: $sub_widget_background;
+	border: none;
+}
+
+/*--------------------skfdialog--------------------*/
+QDialog#skfdialog{
+	background: $white_color;
+	border: none;
+}
+
+QDialog#skfdialog QLabel#labelTitle{
+	font-size: $large_font;
+	color: $first_level_color;
+}
+
+QDialog#skfdialog QWidget#widgetContent{
+	background-color: $sub_widget_background;
+	border: none;
+}
+
+QDialog#skfdialog QPushButton#pushButtonCancel{
+	background-color:transparent;
+	border:none;
+	color: $main_color;
+	padding: 0px;
+}
+
+/*--------------------DiagnoseDlg--------------------*/
+QDialog#DiagnoseDlg QWidget#widgetTop
+{
+	background-color: $diagnose_top_background;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetTopBGImg
+{
+	background-image: url(:/isecsp/res/diagnose_background.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+QDialog#DiagnoseDlg QToolButton#toolButtonClose:hover
+{
+	background: $close_hover_background;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetTop QLabel
+{
+	color: $white_color;
+	font-size: $max_font;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetTop QToolButton#toolButtonExport, QToolButton#toolButtonRepair
+{
+	background-color: $main_color;
+	color: $white_color;
+	font-size: $mid_font;
+	padding: 4px 16px 4px 16px;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetManualNetDiag
+{
+	background-color: #F8F8F8;
+	border:none;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetManualNetDiag QLineEdit
+{
+	border-right: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetManualNetDiag QComboBox
+{
+	border-left: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+QDialog#DiagnoseDlg QRadioButton::indicator::checked
+{
+	background-image: url(:/isecsp/res/upArrow.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QDialog#DiagnoseDlg QRadioButton::indicator::unchecked
+{
+	background-image: url(:/isecsp/res/downArrow.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetDiagnoseContent
+{
+	background-color: $white_color;
+	border:none;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetContent QToolButton
+{
+	background-color: transparent;
+	border: 1px solid $main_color;
+	border-radius: $button_border_radius;
+	color: $main_color;
+	font-size: $mid_font;
+	padding: 4px 16px 4px 16px;
+}
+
+QDialog#DiagnoseDlg QWidget#widgetContent QLabel#labelManualNetDiag, QLabel#labelNetDiag, QLabel#labelOtherDiag
+{
+	font-size: $mid_font;
+}
+
+QDialog#DiagnoseDlg QLabel#labelIP, QLabel#labelDNS, QLabel#labelPublicIP, QLabel#labelSiteIP, QLabel#labelRoute, QLabel#labelAdapter, 
+					QLabel#labelSpa, QLabel#labelTime, QLabel#labelOsVersion, QLabel#labelClientVersion,
+					QLabel#labelFirewall, QLabel#labelHostname, QLabel#labelMac, QLabel#labelDeviceId, QLabel#labelCpuId, QLabel#labelHardwareId,
+					QLabel#labelVpnd, QLabel#labelHttpd, QLabel#labelVTAPService, QLabel#labelVTAPManager,
+					QLabel#labelHuorong, QLabel#labelTencentGuanjia, QLabel#labelRising
+{
+	color: #999999;
+	font-size: $normal_font;
+}
+
+QDialog#DiagnoseDlg QLabel#labelTimeError
+{
+	color: #FF5722;
+}
+
+QScrollArea#scrollAreaDiagnoseContent QScrollBar:vertical, QScrollArea#scrollAreaManualNetDiagResult QScrollBar:vertical{
+	background: rgb(240, 242, 244);
+}
+	
+QScrollArea#scrollAreaDiagnoseContent QScrollBar::handle:vertical, QScrollArea#scrollAreaManualNetDiagResult QScrollBar::handle:vertical{
+	background: rgb(210, 213, 216);
+}
+
+QDialog#DiagnoseDlg QProgressBar#progressBar
+{
+	background-color: $sub_widget_background;
+	border: none;
+	max-height: 8px;
+	font-size: $normal_font;
+}
+
+QDialog#DiagnoseDlg QProgressBar#progressBar::chunk
+{
+	background-color: $diagnose_top_background;
+	width: 8px;
+	margin: 0.5px;
+}
+
+/*--------------------MessageBox--------------------*/
+QDialog#MsgBox{
+	background: $white_color;
+	border: 1px solid $border_color;
+}
+
+QDialog#MsgBox QLabel#labelTitle{
+	font-size: $large_font;
+}
+
+QDialog#MsgBox QPushButton#pushButtonNo{
+	background-color: transparent;
+	border: none;
+	color: $main_color;
+	padding: 0px;
+}
+
+/*--------------------widgetPwd--------------------*/
+QWidget#widgetSPASharedPwd, QWidget#widgetSPAPwd, 
+QWidget#widgetPassProxy, QWidget#widgetSignCertPass, QWidget#widgetEncCertPass,
+QWidget#widgetPassword, QWidget#widgetPassword2, QWidget#widgetPassword3,
+QWidget#widgetOldPwd, QWidget#widgetNewPwd, QWidget#widgetConfirPwd, 
+QWidget#widgetWindowsPassword, QWidget#widgetReEnterPassword,
+QWidget#widgetPinCode,
+QDialog#skfdialog QWidget#widgetPwd
+{
+	background: $white_color;
+	border: 1px solid $border_color;
+	border-radius: $button_border_radius;
+}
+
+QWidget#widgetSPASharedPwd QLineEdit#lineEditSPASharedPwd, QWidget#widgetSPAPwd QLineEdit#lineEditSPAPwd, 
+QWidget#widgetPassProxy QLineEdit#lineEditPassProxy, QWidget#widgetSignCertPass QLineEdit#lineEditSignCertPass,QWidget#widgetEncCertPass QLineEdit#lineEditEncCertPass,
+QWidget#widgetPassword QLineEdit#lineEditPassword, QWidget#widgetPassword2 QLineEdit#lineEditPassword2, QWidget#widgetPassword3 QLineEdit#lineEditPassword3, 
+QWidget#widgetOldPwd QLineEdit#lineEditOldPwd, QWidget#widgetNewPwd QLineEdit#lineEditNewPwd, QWidget#widgetConfirPwd QLineEdit#lineEditConfirPwd, 
+QWidget#widgetWindowsPassword QLineEdit#lineEditWindowsPassword, QWidget#widgetReEnterPassword QLineEdit#lineEditReEnterPassword,
+QWidget#widgetPinCode QLineEdit#lineEditPinCode,
+QDialog#skfdialog QWidget#widgetPwd QLineEdit#lineEditPwd
+{
+	background: transparent;
+	border: none;
+}
+
+QWidget#widgetSPASharedPwd QCheckBox#checkBoxSPASharedPwd, QWidget#widgetSPAPwd QCheckBox#checkBoxSPAPwd, 
+QWidget#widgetPassProxy QCheckBox#checkBoxPassProxy, QWidget#widgetSignCertPass QCheckBox#checkBoxSignCertPass,QWidget#widgetEncCertPass QCheckBox#checkBoxEncCertPass,
+QWidget#widgetPassword QCheckBox#checkBoxPassword, QWidget#widgetPassword2 QCheckBox#checkBoxPassword2, QWidget#widgetPassword3 QCheckBox#checkBoxPassword3, 
+QWidget#widgetOldPwd QCheckBox#checkBoxOldPwd, QWidget#widgetNewPwd QCheckBox#checkBoxNewPwd, QWidget#widgetConfirPwd QCheckBox#checkBoxConfirPwd, 
+QWidget#widgetWindowsPassword QCheckBox#checkBoxWindowsPassword, QWidget#widgetReEnterPassword QCheckBox#checkBoxReEnterPassword,
+QWidget#widgetPinCode QCheckBox#checkBoxPinCodeEye,
+QDialog#skfdialog QWidget#widgetPwd QCheckBox#checkBoxPwd
+{
+	background-color: transparent;
+	border: none;
+}
+
+QWidget#widgetSPASharedPwd QCheckBox#checkBoxSPASharedPwd::indicator, QWidget#widgetSPAPwd QCheckBox#checkBoxSPAPwd::indicator, 
+QWidget#widgetPassProxy QCheckBox#checkBoxPassProxy::indicator, QWidget#widgetSignCertPass QCheckBox#checkBoxSignCertPass::indicator,QWidget#widgetEncCertPass QCheckBox#checkBoxEncCertPass::indicator,
+QWidget#widgetPassword QCheckBox#checkBoxPassword::indicator, QWidget#widgetPassword2 QCheckBox#checkBoxPassword2::indicator, QWidget#widgetPassword3 QCheckBox#checkBoxPassword3::indicator, 
+QWidget#widgetOldPwd QCheckBox#checkBoxOldPwd::indicator, QWidget#widgetNewPwd QCheckBox#checkBoxNewPwd::indicator, QWidget#widgetConfirPwd QCheckBox#checkBoxConfirPwd::indicator, 
+QWidget#widgetWindowsPassword QCheckBox#checkBoxWindowsPassword::indicator, QWidget#widgetReEnterPassword QCheckBox#checkBoxReEnterPassword::indicator,
+QWidget#widgetPinCode QCheckBox#checkBoxPinCodeEye::indicator,
+QDialog#skfdialog QWidget#widgetPwd QCheckBox#checkBoxPwd::indicator
+{
+	min-width: 30px;
+	border: none;
+}
+
+QWidget#widgetSPASharedPwd QCheckBox#checkBoxSPASharedPwd::checked, QWidget#widgetSPAPwd QCheckBox#checkBoxSPAPwd::checked, 
+QWidget#widgetPassProxy QCheckBox#checkBoxPassProxy::checked, QWidget#widgetSignCertPass QCheckBox#checkBoxSignCertPass::checked,QWidget#widgetEncCertPass QCheckBox#checkBoxEncCertPass::checked,
+QWidget#widgetPassword QCheckBox#checkBoxPassword::checked, QWidget#widgetPassword2 QCheckBox#checkBoxPassword2::checked, QWidget#widgetPassword3 QCheckBox#checkBoxPassword3::checked, 
+QWidget#widgetOldPwd QCheckBox#checkBoxOldPwd::checked, QWidget#widgetNewPwd QCheckBox#checkBoxNewPwd::checked, QWidget#widgetConfirPwd QCheckBox#checkBoxConfirPwd::checked, 
+QWidget#widgetWindowsPassword QCheckBox#checkBoxWindowsPassword::checked, QWidget#widgetReEnterPassword QCheckBox#checkBoxReEnterPassword::checked,
+QWidget#widgetPinCode QCheckBox#checkBoxPinCodeEye::checked,
+QDialog#skfdialog QWidget#widgetPwd QCheckBox#checkBoxPwd::checked
+{
+	background-image: url(:/isecsp/res/pwdDisplay.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
+
+QWidget#widgetSPASharedPwd QCheckBox#checkBoxSPASharedPwd::unchecked, QWidget#widgetSPAPwd QCheckBox#checkBoxSPAPwd::unchecked, 
+QWidget#widgetPassProxy QCheckBox#checkBoxPassProxy::unchecked, QWidget#widgetSignCertPass QCheckBox#checkBoxSignCertPass::unchecked,QWidget#widgetEncCertPass QCheckBox#checkBoxEncCertPass::unchecked,
+QWidget#widgetPassword QCheckBox#checkBoxPassword::unchecked, QWidget#widgetPassword2 QCheckBox#checkBoxPassword2::unchecked, QWidget#widgetPassword3 QCheckBox#checkBoxPassword3::unchecked, 
+QWidget#widgetOldPwd QCheckBox#checkBoxOldPwd::unchecked, QWidget#widgetNewPwd QCheckBox#checkBoxNewPwd::unchecked, QWidget#widgetConfirPwd QCheckBox#checkBoxConfirPwd::unchecked, 
+QWidget#widgetWindowsPassword QCheckBox#checkBoxWindowsPassword::unchecked, QWidget#widgetReEnterPassword QCheckBox#checkBoxReEnterPassword::unchecked,
+QWidget#widgetPinCode QCheckBox#checkBoxPinCodeEye::unchecked,
+QDialog#skfdialog QWidget#widgetPwd QCheckBox#checkBoxPwd::unchecked
+{
+	background-image: url(:/isecsp/res/pwdHide.png);
+    background-repeat: no-repeat;
+	background-position: center;
+}
